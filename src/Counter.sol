@@ -1,14 +1,14 @@
-// SPDX-License-Identifier: UNLICENSED
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.13;
 
-contract Counter {
-    uint256 public number;
+contract SimpleStorage {
+    uint256 public myFavoriteNumber;
 
-    function setNumber(uint256 newNumber) public {
-        number = newNumber;
+    function store(uint256 _favoriteNumber) public {
+        myFavoriteNumber = _favoriteNumber;
     }
 
-    function increment() public {
-        number++;
+    function retrieve() public view returns (uint256) {
+        return myFavoriteNumber;
     }
 }
